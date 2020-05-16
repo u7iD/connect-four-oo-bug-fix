@@ -126,13 +126,14 @@ class Game {
       //  - cells: list of four (y, x) cells
       //  - returns true if all are legal coordinates & all match currPlayer
       // debugger;
-      return cells.every(([y, x]) => {
-        y >= 0 &&
+      return cells.every(
+        ([y, x]) =>
+          y >= 0 &&
           y < this.height &&
           x >= 0 &&
           x < this.width &&
-          this.board[y][x] === this.currPlayer;
-      });
+          this.board[y][x] === this.currPlayer
+      );
     };
 
     for (let y = 0; y < this.height; y++) {
